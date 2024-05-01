@@ -1,0 +1,56 @@
+[
+  {
+    "nazwanie": "ASUS TUF Gaming A15",
+    "processor": "AMD Ryzen 5 7535HS",
+    "graphics_card": "NVIDIA GeForce RTX 3050",
+    "ram": "16GB, DDR5, 4800MHz",
+    "storage": "512GB PCIe NVMe 4.0",
+    "price": 3190,
+    "image_url": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/63/6384006/Laptop-ASUS-TUF-Gaming-GA15-FA506NC-skos2.jpg"
+  },
+  {
+    "nazwanie": "ACER Predator Helios Neo",
+    "processor": "Intel Core i5-13500HX",
+    "graphics_card": "NVIDIA GeForce RTX 4050",
+    "ram": "16GB, DDR5",
+    "storage": "1000GB PCIe NVMe",
+    "price": 7599,
+    "image_url": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/54/5454240/Laptop-ACER-Predator-Helios-Neo-PHN16-71-56NK-01.jpg"
+  },
+  {
+    "nazwanie": "ASUS ROG Strix G17",
+    "processor": "AMD Ryzen 9 7845HX",
+    "graphics_card": "NVIDIA GeForce RTX 4050",
+    "ram": "16GB, DDR5, 4800MHz",
+    "storage": "512GB PCIe NVMe 4.0",
+    "price": 7238,
+    "image_url": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/52/5216548/Laptop-ASUS-ROG-Strix-G17-G713PU-HX042-01.jpg"
+  },
+  {
+    "nazwanie": "LENOVO Legion Slim 5 16IRH8 16",
+    "processor": "Intel Core i5-13500H",
+    "graphics_card": "NVIDIA GeForce RTX 4060",
+    "ram": "16GB, DDR5, 5200MHz",
+    "storage": "1000GB PCIe NVMe 4.0 x4",
+    "price": 6209,
+    "image_url": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/59/5917888/Laptop-LENOVO-Legion-Slim-5-16IRH8-01.jpg"
+  },
+  {
+    "nazwanie": "ACER Nitro 5 AN515-58 15.6",
+    "processor": "Intel Core i7-12650H",
+    "graphics_card": "NVIDIA GeForce RTX 4060",
+    "ram": "16GB, DDR5, 5200MHz",
+    "storage": "1000GB PCIe NVMe 4.0",
+    "price": 5999,
+    "image_url": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/59/5932888/Laptop-ACER-Nitro-5-AN515-58-01.jpg"
+  },
+  {
+    "nazwanie": "HP Victus 15-FA0999NW 15.6",
+    "processor": "Intel Core i5-12450H",
+    "graphics_card": "NVIDIA GeForce RTX 3050",
+    "ram": "16GB, DDR4, 3200MHz",
+    "storage": "512GB PCIe NVMe",
+    "price": 3999,
+    "image_url": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/60/6007628/Laptop-HP-Victus-15-FA0999NW-001.jpg"
+  }
+]

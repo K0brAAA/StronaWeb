@@ -1,0 +1,57 @@
+﻿@page "/laptop"
+
+<PageTitle>laptopy</PageTitle>
+
+<main class="main-lap">
+    <div class="separator"></div>
+    <div class="mocny">
+        <h1 style="font-weight: 700; font-size:50px;">Laptopy</h1>
+    </div>
+    <div class="separator"></div>
+    <section id="weak" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/65/6525046/Laptop-LENOVO-Yoga-7-2-in-1-14IML9-01.jpg" alt="Weak Computer">
+        <h2 class="ZaglowekPC">LENOVO Yoga 7</h2>
+        <p style="color: red; font-weight: 1000;">Price: 4999 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=LENOVO Yoga 7&param2=4999'">Купить</button>
+    </section>
+    <section id="medium" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/55/5565004/Laptop-APPLE-MacBook-Air-2023-01.jpg" alt="Medium Computer">
+        <h2 class="ZaglowekPC">MacBook Air 2023 15.3</h2>
+        <p style="color: red; font-weight: 1000;">Price: 7299 zł</p>
+        <button class="button">Купить</button>
+    </section>
+    <section id="strong" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/51/5173956/Laptop-ASUS-ZenBook-UM3402YA-KP373W-01.jpg" alt="Strong Computer">
+        <h2 class="ZaglowekPC">ASUS ZenBook 14</h2>
+        <p style="color: red; font-weight: 1000;">Price: 3599 zł</p>
+        <button class="button">Купить</button>
+    </section>
+    <section id="powerful1" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/61/6133028/Laptop-LENOVO-IdeaPad-Slim-3-16IAH8-0-1.jpg" alt="Powerful Computer 1">
+        <h2 class="ZaglowekPC">LENOVO IdeaPad Slim 3</h2>
+        <p style="color: red; font-weight: 1000;">Price: 2799 zł</p>
+        <button class="button">Купить</button>
+    </section>
+    <section id="powerful2" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/54/5454332/Laptop-ACER-Chromebook-515-CB515-1W-583T-01.jpg" alt="Powerful Computer 2">
+        <h2 class="ZaglowekPC">ACER Chromebook 515</h2>
+        <p style ="color: red; font-weight: 1000;">Price: 2699 zł</p>
+        <button class="button">Купить</button>
+    </section>
+    <section id="powerful3" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6423976/Laptop-ASUS-ZenBook-14X-UM5401RA-KP126W-01.jpg" alt="Powerful Computer 3">
+        <h2 class="ZaglowekPC">ASUS ZenBook 14X</h2>
+        <p style="color: red; font-weight: 1000;">Price: 5999 zł</p>
+        <button class="button">Купить</button>
+    </section>
+    <div class="separator"></div>
+</main>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

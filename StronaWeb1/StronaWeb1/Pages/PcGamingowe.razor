@@ -1,0 +1,93 @@
+﻿@page "/pc-gamingowe"
+@inject HttpClient Http
+
+<PageTitle>pc-gamingowe</PageTitle>
+
+<style>
+    p {
+        font-family: Mulish,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 4px;
+        font-weight: 550;
+    }
+</style>
+<main class="main-lap">
+    <div class="separator"></div>
+    <div class="mocny">
+        <h1 style="
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Komputery gamingowe
+        </h1>
+    </div>
+    <div class="separator"></div>
+    <section id="weak" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/63/6314306/Komputer-MAD-DOG-1.jpg" alt="Weak Computer">
+        <h2 class="ZaglowekPC">MAD DOG ENDORFY</h2>
+        <p>Procesor: Intel Core i5-13400F</p>
+        <p>Karta graficzna: NVIDIA GeForce RTX 4060</p>
+        <p>Pamięć RAM: 16GB DDR4</p>
+        <p>Dysk: 1000 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 5099 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=MAD DOG ENDORFY&param2=5099&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/63/6314306/Komputer-MAD-DOG-1.jpg &param5=Procesor: Intel Core i5-13400F&param6=Karta graficzna: NVIDIA GeForce RTX 4060'">
+            Buy
+        </button>
+    </section>
+    <section id="medium" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/60/6035040/Komputer-MAD-DOG-MD5700X-1.jpg" alt="Medium Computer">
+        <h2 class="ZaglowekPC">MAD DOG MD13500</h2>
+        <p>Procesor: Intel Core i5-13500</p>
+        <p>Karta graficzna: NVIDIA GeForce RTX 4060 Ti</p>
+        <p>Pamięć RAM: 32GB DDR4</p>
+        <p>Dysk: 1000 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 6149 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=MAD DOG MD13500&param2=6149&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/60/6035040/Komputer-MAD-DOG-MD5700X-1.jpg &param5=Procesor: Intel Core i5-13500&param6=Karta graficzna: NVIDIA GeForce RTX 4060 Ti&param7=Pamięć RAM: 32GB DDR4&param8=Dysk: 1000 GB SSD'">Buy</button>
+    </section>
+    <section id="strong" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/65/6548830/1.jpg" alt="Strong Computer">
+        <h2 class="ZaglowekPC">MAD DOG VALORAIR</h2>
+        <p>Procesor: AMD Ryzen 5 5600</p>
+        <p>Karta graficzna: NVIDIA GeForce RTX 4060</p>
+        <p>Pamięć RAM: 16GB DDR4</p>
+        <p>Dysk: 1000 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 3659 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=MAD DOG VALORAIR&param2=3659&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/65/6548830/1.jpg &param5=Procesor: AMD Ryzen 5 5600&param6=Karta graficzna: NVIDIA GeForce RTX 4060&param7=Pamięć RAM: 16GB DDR4&param8=Dysk: 1000 GB SSD'">Buy</button>
+    </section>
+    <section id="powerful1" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/55/5556032/Komputer-OPTIMUS-E-sport-Extreme-GZ790T-CR1-lewy-skoss-1.jpg" alt="Powerful Computer 1">
+        <h2 class="ZaglowekPC">OPTIMUS E-sport Extreme</h2>
+        <p>Procesor: Intel Core i7-13700KF</p>
+        <p>Karta graficzna: NVIDIA GeForce RTX 4070 Ti</p>
+        <p>Pamięć RAM: 32GB DDR5</p>
+        <p>Dysk: 1000 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 9999 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=OPTIMUS E-sport Extreme&param2=9999&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/55/5556032/Komputer-OPTIMUS-E-sport-Extreme-GZ790T-CR1-lewy-skoss-1.jpg&param5=Procesor: Intel Core i7-13700KF&param6=Karta graficzna: NVIDIA GeForce RTX 4070 Ti&param7=Pamięć RAM: 32GB DDR5&param8=Dysk: 1000 GB SSD'">Buy</button>
+     </section>
+    <section id="powerful2" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6496382/Komputer-XQUANTUM-Creator-GeForce-RTX-Studio-front-bok-lewy.jpg" alt="Powerful Computer 2">
+        <h2 class="ZaglowekPC">XQUANTUM Creator RTX Studio</h2>
+        <p>Procesor: Intel Core i5-14600KF</p>
+        <p>Karta graficzna: NVIDIA GeForce RTX 4070 Super</p>
+        <p>Pamięć RAM: 32GB DDR5</p>
+        <p>Dysk: 2000 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 9377 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=XQUANTUM Creator RTX Studio&param2=9377&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6496382/Komputer-XQUANTUM-Creator-GeForce-RTX-Studio-front-bok-lewy.jpg &param5=Procesor: Intel Core i5-14600KF&param6=Karta graficzna: NVIDIA GeForce RTX 4070 Super&param7=Pamięć RAM: 32GB DDR5&param8=Dysk: 2000 GB SSD'">Buy</button>
+    </section>
+    <section id="powerful3" class="computer">
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/65/6549314/1.jpg" alt="Powerful Computer 3">
+        <h2 class="ZaglowekPC">MAD DOG CS2 Reflex Edition</h2>
+        <p>Procesor: AMD Ryzen 9 7950X3D</p>
+        <p>Karta graficzna: NVIDIA GeForce RTX 4090</p>
+        <p>Pamięć RAM: 64GB DDR5</p>
+        <p>Dysk: 2000 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 18299 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=MAD DOG CS2 Reflex Edition&param2=18299&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/65/6549314/1.jpg&param5=Procesor: AMD Ryzen 9 7950X3D&param6=Karta graficzna: NVIDIA GeForce RTX 4090&param7=Pamięć RAM: 64GB DDR5&param8=Dysk: 2000 GB SSD'">Buy</button>
+    </section>
+    <div class="separator"></div>
+
+</main>
