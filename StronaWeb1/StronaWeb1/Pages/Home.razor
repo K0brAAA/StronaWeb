@@ -1,4 +1,78 @@
 ﻿@page "/"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .icon-grid {
+            margin-left: 40px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            width: 95%;
+            height: calc(100% - 40px); /* Adjust height considering the vertical padding */
+        }
 
-<PageTitle>Home</PageTitle>
+        .icon-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            height: 700px;
+            border-radius: 10px;
+        }
 
+            .icon-item:hover {
+                transform: scale(1.05);
+            }
+
+            .icon-item a {
+                text-decoration: none;
+                color: white;
+                font-size: 3em; /* Increased font size */
+                font-weight: bold;
+                background-color: rgba(0, 0, 0, 0.3); /* Added background color */
+                padding: 20px; /* Adjusted padding */
+                border-radius: 3px;
+            }
+
+        .laptops {
+            background-image: url('https://i.pinimg.com/564x/20/4e/90/204e905bfc7f55c45f3a0eeddc2431c9.jpg');
+        }
+
+        .gaming-laptops {
+            background-image: url('https://i.pinimg.com/564x/df/8b/c8/df8bc81afb3df8bafb18e5b11a02267b.jpg');
+        }
+
+        .desktops {
+            background-image: url('https://i.pinimg.com/564x/a5/89/74/a589746727c41e4451e8499ea03d9cd0.jpg');
+        }
+
+        .gaming-desktops {
+            background-image: url('https://i.pinimg.com/564x/ed/d9/0a/edd90a5895bdbac7367965ea1ec79016.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-grid">
+        <div class="icon-item laptops">
+            <a href="laptop">Laptopy do pracy</a>
+        </div>
+        <div class="icon-item gaming-laptops">
+            <a href="laptopy-gamingowe">Laptopy gamingowe</a>
+        </div>
+        <div class="icon-item desktops">
+            <a href="pc-page">Komputery do pracy</a>
+        </div>
+        <div class="icon-item gaming-desktops">
+            <a href="pc-gamingowe">Komputery gamingowe</a>
+        </div>
+    </div>
+</body>
+</html>

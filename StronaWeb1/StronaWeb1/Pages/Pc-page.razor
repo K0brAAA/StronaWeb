@@ -1,56 +1,118 @@
 ﻿@page "/Pc-page"
 @inject HttpClient Http
 
-<PageTitle>Weather</PageTitle>
+<PageTitle>pc</PageTitle>
 
+<style>
+    p {
+        font-family: Mulish,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 4px;
+        font-weight: 550;
+    }
+
+    .computer {
+        border: 3px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        font: 15px arial;
+        transition: background-color 0.3s,transform 0.3s ease-in-out;
+    }
+
+        .computer img {
+            width: 25rem;
+
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+</style>
 <main class="main-lap">
     <div class="separator"></div>
     <div class="mocny">
+        <h1 style="
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Komputery
+        </h1>
     </div>
     <div class="separator"></div>
     <section id="weak" class="computer">
-        <img src="https://robotcomp.ru/wa-data/public/shop/products/16/62/16216/images/30065/30065.750.jpg" alt="Weak Computer">
-        <h2 class="ZaglowekPC">Слабый ПК</h2>
-        <p>Описание и спецификации слабого ПК.</p>
-        <p>Цена: $500</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/54/5446920/Komputer-ASUS_ExpertCenter-D700SD-skos.jpg" alt="Weak Computer">
+        <h2 class="ZaglowekPC">ASUS ExpertCenter D700SD</h2>
+        <p>Procesor: Intel Core i5-12400</p>
+        <p>Karta graficzna: Intel UHD Graphics 730</p>
+        <p>Pamięć RAM: 8GB DDR4</p>
+        <p>Dysk: 256 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 2545 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=ASUS ExpertCenter D700SD&param2=5099&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/54/5446920/Komputer-ASUS_ExpertCenter-D700SD-skos.jpg &param5=Procesor: Intel Core i5-12400&param6=Karta graficzna: Intel UHD Graphics 730'">
+            Buy
+        </button>
     </section>
     <section id="medium" class="computer">
-        <img src="https://robotcomp.ru/wa-data/public/shop/products/16/62/16216/images/30065/30065.750.jpg" alt="Medium Computer">
-        <h2 class="ZaglowekPC">Средний ПК</h2>
-        <p>Описание и спецификации среднего ПК.</p>
-        <p>Цена: $1000</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/54/5497934/Komputer-DELL-Vostro-3710-SFF-front-lewy.jpg" alt="Medium Computer">
+        <h2 class="ZaglowekPC">DELL Vostro 3710 SFF</h2>
+        <p>Procesor: Intel Core i7-12700</p>
+        <p>Karta graficzna: Intel UHD Graphics 770</p>
+        <p>Pamięć RAM: 16GB DDR4</p>
+        <p>Dysk: 512 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 3549 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=DELL Vostro 3710 SFF&param2=3549&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/54/5497934/Komputer-DELL-Vostro-3710-SFF-front-lewy.jpg &param5=Procesor: Intel Core i7-12700&param6=Karta graficzna: Intel UHD Graphics 770&param7=Pamięć RAM: 16GB DDR4&param8=Dysk: 512 GB SSD'">
+            Buy
+        </button>
     </section>
     <section id="strong" class="computer">
-        <img src="https://robotcomp.ru/wa-data/public/shop/products/16/62/16216/images/30065/30065.750.jpg" alt="Strong Computer">
-        <h2 class="ZaglowekPC">Сильный ПК</h2>
-        <p>Описание и спецификации мощного ПК.</p>
-        <p>Цена: $1500</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/55/5520828/Komputer-MSI-Pro-DP180-13-017EU-front.jpg" alt="Strong Computer">
+        <h2 class="ZaglowekPC">MSI Pro DP180</h2>
+        <p>Procesor: Intel Core i3-13100</p>
+        <p>Karta graficzna: Intel UHD Graphics 730</p>
+        <p>Pamięć RAM: 8GB DDR4</p>
+        <p>Dysk: 256 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 2299 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=MSI Pro DP180&param2=2299&param4=https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/56/5691656/Komputer-MSI-Pro-DP180-13-018EU-front.jpg &param5=Procesor: Intel Core i3-13100&param6=Karta graficzna: Intel UHD Graphics 730&param7=Pamięć RAM: 8GB DDR4&param8=Dysk: 256 GB SSD'">
+            Buy
+        </button>
     </section>
     <section id="powerful1" class="computer">
-        <img src="https://robotcomp.ru/wa-data/public/shop/products/16/62/16216/images/30065/30065.750.jpg" alt="Powerful Computer 1">
-        <h2 class="ZaglowekPC">Мощный ПК 1</h2>
-        <p>Описание и спецификации мощного ПК 1.</p>
-        <p>Цена: $2000</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6432444/Komputer-DELL-Optiplex-7010-SFF.jpeg" alt="Powerful Computer 1">
+        <h2 class="ZaglowekPC">DELL OptiPlex 7010 MFF</h2>
+        <p>Procesor: Intel Core i3-13100T</p>
+        <p>Karta graficzna: Intel UHD Graphics 730</p>
+        <p>Pamięć RAM: 8GB DDR4</p>
+        <p>Dysk: 256 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 2999 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=DELL OptiPlex 7010 MFF&param2=2999&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6432444/Komputer-DELL-Optiplex-7010-SFF.jpeg &param5=Procesor: Intel Core i3-13100T&param6=Karta graficzna: Intel UHD Graphics 730&param7=Pamięć RAM: 8GB DDR4&param8=Dysk: 256 GB SSD'">
+            Buy
+        </button>
     </section>
     <section id="powerful2" class="computer">
-        <img src="https://robotcomp.ru/wa-data/public/shop/products/16/62/16216/images/30065/30065.750.jpg" alt="Powerful Computer 2">
-        <h2 class="ZaglowekPC">Мощный ПК 2</h2>
-        <p>Описание и спецификации мощного ПК 2.</p>
-        <p>Цена: $2500</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/58/5803276/Komputer-LENOVO-ThinkCentre-Neo-50s-Gen-4-front-bok-lewy.jpeg" alt="Powerful Computer 2">
+        <h2 class="ZaglowekPC">LENOVO ThinkCentre neo 50q Gen 4</h2>
+        <p>Procesor: Intel Core i5-13420H</p>
+        <p>Karta graficzna: Intel UHD Graphics</p>
+        <p>Pamięć RAM: 8GB DDR4</p>
+        <p>Dysk: 512 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 3549 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=LENOVO ThinkCentre neo 50q Gen 4&param2=3549&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/58/5803276/Komputer-LENOVO-ThinkCentre-Neo-50s-Gen-4-front-bok-lewy.jpeg &param5=Procesor: Intel Core i5-13420H&param6=Karta graficzna: Intel UHD Graphics&param7=Pamięć RAM: 8GB DDR4&param8=Dysk: 512 GB SSD'">Buy</button>
     </section>
     <section id="powerful3" class="computer">
-        <img src="https://robotcomp.ru/wa-data/public/shop/products/16/62/16216/images/30065/30065.750.jpg" alt="Powerful Computer 3">
-        <h2 class="ZaglowekPC">Мощный ПК 3</h2>
-        <p>Описание и спецификации мощного ПК 3.</p>
-        <p>Цена: $3000</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/36/3641073/APPLE-Mac-Studio-01.jpg" alt="Powerful Computer 3">
+        <h2 class="ZaglowekPC">APPLE Mac Mini 2023 M2</h2>
+        <p>Procesor: Apple M2</p>
+        <p>Karta graficzna: Apple M2 (10 rdzeni)</p>
+        <p>Pamięć RAM: 8GB DDR4</p>
+        <p>Dysk: 512 GB SSD</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 4141 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=APPLE Mac Mini 2023 M2&param2=4141&param4=https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/51/5135746/Komputer-APPLE-Mac-Mini-1.jpg &param5=Procesor: Apple M2&param6=Karta graficzna: Apple M2 (10 rdzeni)&param7=Pamięć RAM: 8GB DDR4&param8=Dysk: 512 GB SSD'">Buy</button>
     </section>
     <div class="separator"></div>
+
 </main>
+
 
 

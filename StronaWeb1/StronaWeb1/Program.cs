@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-// Добавляем сервис DataService
-builder.Services.AddScoped<IDataService, DataService>();
-
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 

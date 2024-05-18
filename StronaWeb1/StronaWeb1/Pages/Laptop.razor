@@ -1,57 +1,92 @@
 ﻿@page "/laptop"
 
-<PageTitle>laptopy</PageTitle>
+@inject HttpClient Http
 
+<PageTitle>Laptopy-gamingowe</PageTitle>
+<style>
+    p {
+        font-family: Mulish,-apple-system,blinkmacsystemfont,"Segoe UI",roboto,"Helvetica Neue",arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 4px;
+        font-weight: 550;
+    }
+</style>
 <main class="main-lap">
     <div class="separator"></div>
     <div class="mocny">
-        <h1 style="font-weight: 700; font-size:50px;">Laptopy</h1>
+        <h1 style="
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Laptopy gamingowe
+        </h1>
     </div>
     <div class="separator"></div>
     <section id="weak" class="computer">
-        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/65/6525046/Laptop-LENOVO-Yoga-7-2-in-1-14IML9-01.jpg" alt="Weak Computer">
-        <h2 class="ZaglowekPC">LENOVO Yoga 7</h2>
-        <p style="color: red; font-weight: 1000;">Price: 4999 zł</p>
-        <button class="button" onclick="document.location='./zakup?param1=LENOVO Yoga 7&param2=4999'">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6430556/Laptop-LENOVO-IdeaPad-Pro-5-16IMH9-001.jpg" alt="Weak Computer">
+        <h2 class="ZaglowekPC">LENOVO IdeaPad Pro 5</h2>
+        <p>Procesor: Intel Core Ultra 5-125H</p>
+        <p>Karta graficzna: NVIDIA GeForce RTX 4050</p>
+        <p>RAM: 32GB, LPDDR5X</p>
+        <p>Dysk SSD: 512GB PCIe NVMe 4.0 x4</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 6299 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=LENOVO IdeaPad Pro 5&param2=6299&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6430556/Laptop-LENOVO-IdeaPad-Pro-5-16IMH9-001.jpg &param5=Procesor: Intel Core Ultra 5-125H&param6=Karta graficzna: NVIDIA GeForce RTX 4050&param7=RAM: 32GB, LPDDR5X&param8=Dysk SSD: 512GB PCIe NVMe 4.0 x4'">Buy</button>
     </section>
     <section id="medium" class="computer">
-        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/55/5565004/Laptop-APPLE-MacBook-Air-2023-01.jpg" alt="Medium Computer">
-        <h2 class="ZaglowekPC">MacBook Air 2023 15.3</h2>
-        <p style="color: red; font-weight: 1000;">Price: 7299 zł</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6409676/Laptop-ASUS-VivoBook-15X-M3504YA-MA312W-01.jpg" alt="Medium Computer">
+        <h2 class="ZaglowekPC">ASUS VivoBook 15X</h2>
+        <p>Procesor: AMD Ryzen 5 7530U</p>
+        <p>Karta graficzna: AMD Radeon Graphics</p>
+        <p>RAM: 16GB, DDR4 </p>
+        <p>Dysk SSD: 512GB PCIe NVMe 3.0 x4</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 3399 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=ASUS VivoBook 15X&param2=3399&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6409676/Laptop-ASUS-VivoBook-15X-M3504YA-MA312W-01.jpg &param5=Procesor: AMD Ryzen 5 7530U&param6=Karta graficzna: AMD Radeon Graphics&param7=RAM: 16GB, DDR4&param8=Dysk SSD: 512GB PCIe NVMe 3.0 x4'">Buy</button>
     </section>
     <section id="strong" class="computer">
-        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/51/5173956/Laptop-ASUS-ZenBook-UM3402YA-KP373W-01.jpg" alt="Strong Computer">
-        <h2 class="ZaglowekPC">ASUS ZenBook 14</h2>
-        <p style="color: red; font-weight: 1000;">Price: 3599 zł</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6409588/Laptop-ASUS-Vivobook-Go-E1504FA-L1248W-przod2.jpg" alt="Strong Computer">
+        <h2 class="ZaglowekPC">ASUS VivoBook Go</h2>
+        <p>Procesor: AMD Ryzen 5 7520U</p>
+        <p>Karta graficzna: AMD Radeon 610M</p>
+        <p>RAM: 16GB, LPDDR5</p>
+        <p>Dysk SSD: 512GB PCIe NVMe 3.0</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 3119 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=ASUS VivoBook Go&param2=3119&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6409588/Laptop-ASUS-Vivobook-Go-E1504FA-L1248W-przod2.jpg &param5=Procesor: AMD Ryzen 5 7520U&param6=Karta graficzna: AMD Radeon 610M&param7=RAM: 16GB, LPDDR5&param8=Dysk SSD: 512GB PCIe NVMe 3.0'">Buy</button>
     </section>
     <section id="powerful1" class="computer">
-        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/61/6133028/Laptop-LENOVO-IdeaPad-Slim-3-16IAH8-0-1.jpg" alt="Powerful Computer 1">
-        <h2 class="ZaglowekPC">LENOVO IdeaPad Slim 3</h2>
-        <p style="color: red; font-weight: 1000;">Price: 2799 zł</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/59/5925196/Laptop-LENOVO-IdeaPad-Slim-5-16ABR8-82XG006EPB-01-02.jpg" alt="Powerful Computer 1">
+        <h2 class="ZaglowekPC">LENOVO IdeaPad Slim 5</h2>
+        <p>Procesor: AMD Ryzen 7 7730U</p>
+        <p>Karta graficzna: AMD Radeon Graphics</p>
+        <p>RAM: 16GB, DDR4</p>
+        <p>Dysk SSD: 512GB PCIe NVMe 4.0 x4</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 3599 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=LENOVO IdeaPad Slim 5&param2=3599&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/59/5925196/Laptop-LENOVO-IdeaPad-Slim-5-16ABR8-82XG006EPB-01-02.jpg &param5=Procesor: AMD Ryzen 7 7730U&param6=Karta graficzna: AMD Radeon Graphics&param7=RAM: 16GB, DDR4&param8=Dysk SSD: 512GB PCIe NVMe 4.0 x4'">Buy</button>
     </section>
     <section id="powerful2" class="computer">
-        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/54/5454332/Laptop-ACER-Chromebook-515-CB515-1W-583T-01.jpg" alt="Powerful Computer 2">
-        <h2 class="ZaglowekPC">ACER Chromebook 515</h2>
-        <p style ="color: red; font-weight: 1000;">Price: 2699 zł</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/51/5173956/Laptop-ASUS-ZenBook-UM3402YA-KP373W-01.jpg" alt="Powerful Computer 2">
+        <h2 class="ZaglowekPC">ASUS ZenBook 14</h2>
+        <p>Procesor: AMD Ryzen 5 7530U</p>
+        <p>Karta graficzna: AMD Radeon Graphics</p>
+        <p>RAM: 16GB, LPDDR4</p>
+        <p>Dysk SSD: 512GB PCIe NVMe 3.0</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 3999 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=ASUS ZenBook 14&param2=3999&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/51/5173956/Laptop-ASUS-ZenBook-UM3402YA-KP373W-01.jpg &param5=Procesor: AMD Ryzen 5 7530U&param6=Karta graficzna: AMD Radeon Graphics&param7=RAM: 16GB, LPDDR4&param8=Dysk SSD: 512GB PCIe NVMe 3.0'">Buy</button>
     </section>
     <section id="powerful3" class="computer">
-        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/64/6423976/Laptop-ASUS-ZenBook-14X-UM5401RA-KP126W-01.jpg" alt="Powerful Computer 3">
-        <h2 class="ZaglowekPC">ASUS ZenBook 14X</h2>
-        <p style="color: red; font-weight: 1000;">Price: 5999 zł</p>
-        <button class="button">Купить</button>
+        <img src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/42/4219944/Laptop-MICROSOFT-Surface-Pro-9-ekran-dotykowy-1.jpg" alt="Powerful Computer 3">
+        <h2 class="ZaglowekPC">MICROSOFT Surface Pro</h2>
+        <p>Procesor: Intel Core i5-1235U</p>
+        <p>Karta graficzna: Intel Iris Xe Graphics</p>
+        <p>RAM: 8GB, LPDDR5</p>
+        <p>Dysk SSD: 256GB</p>
+        <p style="color: red;font-size: 20px; font-weight:650;" class="price-line">Price: 3599 zł</p>
+        <button class="button" onclick="document.location='./zakup?param1=MICROSOFT Surface Pro&param2=3599&param4=https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/42/4219944/Laptop-MICROSOFT-Surface-Pro-9-ekran-dotykowy-1.jpg &param5=Procesor: Intel Core i5-1235U&param6=Karta graficzna: Intel Iris Xe Graphics&param7=RAM: 8GB, LPDDR5&param8=Dysk SSD: 256GB'">Buy</button>
     </section>
     <div class="separator"></div>
+
 </main>
 
-@code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-}
